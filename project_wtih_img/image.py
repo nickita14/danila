@@ -26,3 +26,4 @@ with Image.open('cow.png') as background:
 
 with Image.open('cow_edit.png') as image:
     image.show()
+#hello_world
