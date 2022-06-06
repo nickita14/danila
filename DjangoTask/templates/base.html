@@ -5,13 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sweets</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/header.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/about.css' %}">
     <link rel="shortcut icon" href="{% static 'sendemail/images/icon.ico' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/info.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/contact.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sweet_shop/css/product-page.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sweet_shop/css/shop.css' %}">
 </head>
 
 <body>
@@ -30,13 +32,13 @@
                                 <a class="menu-link" href="{% url 'shop' %}">Магазин</a>
                             </li>
                             <li>
-                                <a class="menu-link" href="/sendemail/static#about_us">О нас</a>
+                                <a class="menu-link" href="/#about_us">О нас</a>
                             </li>
                             <li>
-                                <a class="menu-link" href="/sendemail/static#curds">Сырки</a>
+                                <a class="menu-link" href="/#curds">Сырки</a>
                             </li>
                             <li>
-                                <a class="menu-link" href="/sendemail/static#contact_us">Контакты</a>
+                                <a class="menu-link" href="/#contact_us">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -55,13 +57,13 @@
                                     <a class="menu-link" href="{% url 'shop' %}">Магазин</a>
                                 </li>
                                 <li>
-                                    <a class="menu-link" href="/sendemail/static#about_us">О нас</a>
+                                    <a class="menu-link" href="/#about_us">О нас</a>
                                 </li>
                                 <li>
-                                    <a class="menu-link" href="/sendemail/static#curds">Сырки</a>
+                                    <a class="menu-link" href="/#curds">Сырки</a>
                                 </li>
                                 <li>
-                                    <a class="menu-link" href="/sendemail/static#contact_us">Контакты</a>
+                                    <a class="menu-link" href="/#contact_us">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
@@ -69,31 +71,9 @@
                 </div>
             </div>
         </div>
-        <div class="header-content">
-            <div class="header-text">
-                <div class="header-caption">
-                    <span>Добро пожаловать в Sweets</span>
-                    <h1>Магазин Сырков</h1>
-                </div>
-                <div class="header-description">
-                    <p>Глазированные сырки – небольшие творожные батончики,
-                        часто имеющие внутри наполнитель из джема, сгущенки или фруктов,
-                        покрытые темным шоколадом – давно стали своего рода ритуалом для завтрака.</p>
-                </div>
-                <div class="header-form">
-                    <form class="form-for-curds">
-                        <input type="text" class="curds-text" placeholder="Сырки" name="curds">
-                        <button onclick="save_word();" type="button" class="curds-button"><a onclick="save_word();">Поиск</a>
-                        </button>
-                    </form>
-                    <a class="form-link" href="#contact_us">Связаться с нами</a>
-                    <a class="form-link" href="shop/shop.html">Сырки</a>
-                </div>
-            </div>
-            <div class="header-background">
-                <img src="{% static 'sendemail/images/header.png' %}">
-            </div>
-        </div>
+        {% block heder-content %}
+
+        {% endblock %}
     </div>
 </div>
 {% block content %}

@@ -1,71 +1,101 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block heder-content %}
+    <div class="header-content">
+        <div class="header-text">
+            <div class="header-caption">
+                <span>Добро пожаловать в Sweets</span>
+                <h1>Магазин Сырков</h1>
+            </div>
+            <div class="header-description">
+                <p>Глазированные сырки – небольшие творожные батончики,
+                    часто имеющие внутри наполнитель из джема, сгущенки или фруктов,
+                    покрытые темным шоколадом – давно стали своего рода ритуалом для завтрака.</p>
+            </div>
+            <div class="header-form">
+                <form class="form-for-curds">
+                    <input type="text" class="curds-text" placeholder="Сырки" name="curds">
+                    <button onclick="save_word();" type="button" class="curds-button"><a
+                            onclick="save_word();">Поиск</a>
+                    </button>
+                </form>
+                <a class="form-link" href="#contact_us">Связаться с нами</a>
+                <a class="form-link" href="{% url 'shop' %}">Сырки</a>
+            </div>
+        </div>
+        <div class="header-background">
+            <img src="{% static 'sendemail/images/header.png' %}">
+        </div>
+    </div>
+{% endblock %}
 {% block content %}
-<div class="about-box" id="about_us">
-    <div class="row">
-        <div class="about-text">
-            <h2>О нас</h2>
-            <p>Наш магазин предлагает широкий ассортимент глазированных творожных сырков.
-                Это не только вкусный, но и полезный десерт, если он изготовлен в соответствии с ГОСТом.
-                К сожалению, сейчас многие производители делают глазированные творожные сырки, заменяя половину
-                животного жира растительным.
-                Но мы уже выбрали для Вас качественный продукт, чтобы вы не тратили свое драгоценное время на изучение
-                этикеток, стоя в магазине.
-            </p>
-        </div>
-        <div class="about-background">
-            <img src="{% static 'sendemail/images/about.png' %}">
-        </div>
-    </div>
-</div>
-<div class="curds-info" id="curds">
-    <h2>Сырок творожный глазированный</h2>
-    <div class="row">
-        <div class="coll1">Известно, что творожный сырок родился в СССР в тридцатые годы прошлого столетия.
-            По некоторым данным, его придумали для того, чтобы заменить не актуальный в атеистическом обществе
-            пасхальный кулич.
-            Вскоре творожок стал популярен, но дефицитен. В конце девяностых нехватка ушла в небытие, но возникла
-            проблема выбора.
-            Потому что появилось множество новых компаний, а известные компании не перестают расширять линейку,
-            используя для начинок орехи и сухофрукты, варенье и печенье, вафли, шоколад и сгущенку.
-        </div>
-        <div class="coll2">
-            <img src="{% static 'sendemail/images/info1.jpg' %}">
-            <figure>1</figure>
-        </div>
-        <div class="coll3">
-            <img src="{% static 'sendemail/images/info2.jpg' %}">
-            <figure>2</figure>
-        </div>
-        <div class="coll4">
-            Нужно заметить, европейский и азиатский рынки не имеют аналогов нашим творожно-масляным конфетам, облитым
-            глазурью.
-            Новейшие технологии нашли ему применение в кондитерской индустрии.
-            Но в отличие от тортов и новомодных чизкейков, глазированный сырок - продукт действительно массовый и
-            демократичный.
+    <div class="about-box" id="about_us">
+        <div class="row">
+            <div class="about-text">
+                <h2>О нас</h2>
+                <p>Наш магазин предлагает широкий ассортимент глазированных творожных сырков.
+                    Это не только вкусный, но и полезный десерт, если он изготовлен в соответствии с ГОСТом.
+                    К сожалению, сейчас многие производители делают глазированные творожные сырки, заменяя половину
+                    животного жира растительным.
+                    Но мы уже выбрали для Вас качественный продукт, чтобы вы не тратили свое драгоценное время на
+                    изучение
+                    этикеток, стоя в магазине.
+                </p>
+            </div>
+            <div class="about-background">
+                <img src="{% static 'sendemail/images/about.png' %}">
+            </div>
         </div>
     </div>
-</div>
-<div class="contact-box" id="contact_us">
-    <h2>Связаться с нами</h2>
-    <div class="contact-us">
-        <div class="contact-data">
-            <form  class="contact-form" method="post">
-                {% csrf_token %}
-                {% for f in form %}
-                <div class="contact-input">
-                    {{ f }}
-                </div>
-                {% endfor %}
+    <div class="curds-info" id="curds">
+        <h2>Сырок творожный глазированный</h2>
+        <div class="row">
+            <div class="coll1">Известно, что творожный сырок родился в СССР в тридцатые годы прошлого столетия.
+                По некоторым данным, его придумали для того, чтобы заменить не актуальный в атеистическом обществе
+                пасхальный кулич.
+                Вскоре творожок стал популярен, но дефицитен. В конце девяностых нехватка ушла в небытие, но возникла
+                проблема выбора.
+                Потому что появилось множество новых компаний, а известные компании не перестают расширять линейку,
+                используя для начинок орехи и сухофрукты, варенье и печенье, вафли, шоколад и сгущенку.
+            </div>
+            <div class="coll2">
+                <img src="{% static 'sendemail/images/info1.jpg' %}">
+                <figure>1</figure>
+            </div>
+            <div class="coll3">
+                <img src="{% static 'sendemail/images/info2.jpg' %}">
+                <figure>2</figure>
+            </div>
+            <div class="coll4">
+                Нужно заметить, европейский и азиатский рынки не имеют аналогов нашим творожно-масляным конфетам,
+                облитым
+                глазурью.
+                Новейшие технологии нашли ему применение в кондитерской индустрии.
+                Но в отличие от тортов и новомодных чизкейков, глазированный сырок - продукт действительно массовый и
+                демократичный.
+            </div>
+        </div>
+    </div>
+    <div class="contact-box" id="contact_us">
+        <h2>Связаться с нами</h2>
+        <div class="contact-us">
+            <div class="contact-data">
+                <form class="contact-form" method="post">
+                    {% csrf_token %}
+                    {% for f in form %}
+                        <div class="contact-input">
+                            {{ f }}
+                        </div>
+                    {% endfor %}
 
-                <button type="submit" class="form-control btn btn-success">Отправить</button>
-            </form>
-        </div>
-        <div class="contact-map">
-            <iframe width="500" height="500" id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=USM&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                    scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <button type="submit" class="form-control btn btn-success">Отправить</button>
+                </form>
+            </div>
+            <div class="contact-map">
+                <iframe width="500" height="500" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=USM&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                        scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}

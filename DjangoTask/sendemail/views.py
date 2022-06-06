@@ -28,7 +28,7 @@ def index(request):
             return redirect('success')
         else:
             return HttpResponse('Неверный запрос.')
-    return render(request, "sendemail/index.html", {'form': form})
+    return render(request, "sendemail/index.html", {'form': form, 'title' : 'Sweets'})
 
 def success_view(request):
     return HttpResponse('Приняли! Спасибо за вашу заявку.')

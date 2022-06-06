@@ -9,6 +9,12 @@ class Product(models.Model):
     photo = models.ImageField(upload_to='photos/%Y/%m/%d', verbose_name='Фото')
     price = models.CharField(max_length=255, verbose_name='Цена')
     categories = models.ManyToManyField('Category', verbose_name='Категории')
+    composition = models.TextField(verbose_name='Состав')
+    packaging = models.TextField(verbose_name='Упаковка')
+    energy_value = models.TextField(verbose_name='Энеретическая ценность')
+    manufacturer = models.TextField(verbose_name='Производитель')
+    shelf_life = models.TextField(verbose_name='Срок годности')
+    certificates = models.TextField(verbose_name='Сертификаты')
 
     def __str__(self):
         return self.name
@@ -30,7 +36,7 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('category', kwargs={'cat_slug': self.slug})
+        return reverse('category', kwargs={'category_slug': self.slug})
 
     class Meta:
         verbose_name = 'Категория'

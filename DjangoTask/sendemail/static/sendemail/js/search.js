@@ -2,7 +2,7 @@ function save_word(){
 	let value = document.querySelector('.curds-text').value.trim();
 	if(value != '') {
 		localStorage.setItem('word', (value) );
-		document.location.href = "shop/shop.html";
+		window.location.href = "/shop/";
 	}
 }
 

@@ -20,12 +20,3 @@ function follow(){
 	}
 }
 
-function contactUs(){
-	let name = document.querySelector('.contact-input .name').value;
-	let email = document.querySelector('.contact-input .email').value;
-	let phone = document.querySelector('.contact-input .phone').value;
-	let message = document.querySelector('.contact-input .message').value;
-	if(name != '' && email != '' && phone != '' && message != '')
-		alert(name + ', спасибо за Ваше сообщение. Мы обязательно рассмотрим его, и позвоним Вам по номеру: '+ phone + 'в течение дня или пришлем вам ответ, на адрес: ' + email+'.');
-	else alert('Необходимо заполнить каждое поле.')
-}
