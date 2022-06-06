@@ -1,0 +1,138 @@
+.curds-info{
+	margin: 90px auto;
+	padding: 20px 50px 20px 50px;
+}		
+.curds-info h2{
+	text-align: center;
+	width: 100%;
+	font-size: 40px;
+	color: #91D4FF;
+	margin: 90px auto 20px;
+}
+
+
+.curds-info-text{
+	font-size: 17px;
+	line-height: 1.2;
+	width: 480px;
+	padding: 20px 12px;
+}
+.curds-info .row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.coll1{
+	flex: 0 1 100%;
+    max-width: 100%;
+}
+.coll2{
+	flex: 0 1 100%;
+    max-width: 100%;
+}
+.coll3{
+	flex: 0 1 100%;
+    max-width: 100%;
+}
+.coll4{
+	flex: 0 1 100%;
+	max-width: 100%;
+}
+.coll1, .coll2, .coll3, .coll4{
+	box-sizing: border-box;
+	padding: 5px 20px;
+	font-size: 14px;
+}
+.coll3{
+	margin-top: -110px;
+}
+.coll2,.coll3{
+	position: relative;
+}
+.coll2 img, .coll3 img{
+	width: 100%;
+	height: auto;
+}
+.coll2 figure{
+	right: -11px;
+	top: 38%;
+} 
+.coll3 figure{
+	left: -11px;
+	top: 42%;
+}
+
+.curds-info figure{
+	position: absolute;
+	text-align: center;
+	display: block;
+	border: 1px solid #008BFF;
+	border-radius: 40px;
+	background-color: #91D4FF;
+	color: white;
+	font-size: 30px;
+	width: 40px;
+	height: 40px;
+	padding: 10px 10px;
+	margin: 0px;
+}
+
+@media(max-width: 1195px){
+	.coll3{
+		margin-top: 0px;
+	}
+}
+@media (min-width: 996px) {
+	.coll1, .coll2, .coll3, .coll4{
+		padding: 20px;
+	}
+	.curds-info h2{
+		font-size: 50px;
+	}
+	.coll1{
+		font-size: 18px;
+		flex: 0 1 41.666667%;
+	    max-width: 41.666667%;
+	}
+	.coll2{
+		flex: 0 1 58.333333%;
+	    max-width: 58.333333%;
+	}
+	.coll3{
+		flex: 0 1 58.333333%;
+	    max-width: 58.333333%;
+	}
+	.coll4{
+		font-size: 18px;
+		flex: 0 1 41.666667%;
+		max-width: 41.666667%;
+	}
+}
+@media (min-width: 1240px){
+	.curds-info{
+		width: 1140px;
+	}
+}
+@media (max-width: 480px){
+	.curds-info{
+		padding: 20px;
+	}
+	.curds-info h2 {
+		font-size: 30px;
+	}
+	.coll1, .coll4{
+		font-size: 13px;
+		line-height: 1.2;
+	}
+	.curds-info figure{
+		font-size: 20px;
+    	width: 25px;
+    	height: 25px;
+    	padding: 5px;
+	}
+	.coll2 figure{
+		right: 2px;
+	}
+	.coll3 figure{
+		left: 2px;
+	}
+}

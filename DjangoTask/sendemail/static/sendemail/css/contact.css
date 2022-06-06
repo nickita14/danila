@@ -1,0 +1,152 @@
+.contact-box{
+	margin: 90px auto;
+	padding: 40px 50px;
+}
+.contact-us{
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	min-height: 500px;
+	box-shadow: 0px 0px 11px 0px;
+}
+.contact-box h2{
+	text-align: center;
+	width: 100%;
+	font-size: 40px;
+	color: #91D4FF;
+	margin: 0px auto 60px;
+}
+.contact-data{
+	box-sizing: border-box;
+	flex: 0 1 100%;
+	max-width: 100%;
+	padding: 60px 30px 60px 15px;
+}
+.contact-form{
+	box-sizing: border-box;
+	width: 100%;
+}
+.contact-input {
+	box-sizing: border-box;
+	width: 100%;
+}
+.contact-input input{
+	box-sizing: border-box;
+	border: #e8e8e8 solid 1px;
+	padding: 12px 19px;
+	margin-bottom: 26px;
+	border-radius: 1px;
+	font-size: 17px;
+	font-family: Verdana, sans-serif;
+	color: #000;
+	width: 100%;
+}
+.contact-data textarea{
+	box-sizing: border-box;
+	font-size: 17px;
+	font-family: Verdana, sans-serif;
+	color: #000;
+	margin-bottom: 25px;
+    padding: 29px 19px;
+    width: 100%;
+    border: #e8e8e8 solid 1px;
+    border-radius: 1px;
+    padding-top: 50px;
+}
+.contact-map{
+	box-sizing: border-box;
+	min-height: 500px;
+	flex: 0 1 100%;
+    max-width: 100%;
+}
+.contact-map iframe{
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+.contact-form button{
+	font-size: 16px;
+    border: #91D4FF solid 1px;
+    background-color: #91D4FF;
+    color: #fff;
+    padding: 15px 30px;
+    float: right;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.contact-form button:hover{
+	border: #FF6800 solid 1px;
+    background-color: #FF6800;
+    transition: all 0.3s ease-in;
+}
+@media (min-width: 996px) {
+	.contact-data {
+		flex: 0 1 50%;
+	    max-width: 50%;
+	}
+	.contact-map {
+	flex: 0 1 50%;
+    max-width: 50%;
+	}
+	.contact-box h2{
+		font-size: 50px;
+	}
+}
+@media (min-width: 1240px){
+	.contact-us{
+		width: 1140px;
+	}
+}
+@media(max-width: 480px){
+	.contact-data{
+		padding: 30px 15px 15px;
+	}
+	.contact-input input{
+		font-size: 12px;
+	}
+	.contact-data textarea{
+		font-size: 12px;
+		padding: 30px 19px;
+	}
+	.contact-form button{
+		font-size: 13px;
+		padding: 10px 25px;
+	}
+	.contact-map{
+		min-height: 400px;
+	}
+	.contact-box{
+		padding: 20px;
+	}
+	.contact-box h2{
+		font-size: 30px;
+	}
+}
+@media(max-width: 320px){
+	.contact-box{
+		padding: 40px 0px;
+	}
+	.contact-data{
+		padding: 30px 15px 15px;
+	}
+	.contact-input input{
+		font-size: 10px;
+	}
+	.contact-data textarea{
+		font-size: 10px;
+		padding: 30px 19px;
+	}
+	.contact-form button{
+		font-size: 13px;
+		padding: 10px 25px;
+	}
+	.contact-map{
+		min-height: 388px;
+	}
+	.contact-box h2{
+		font-size: 35px;
+		margin: 60px auto 30px;
+	}
+
+}

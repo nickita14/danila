@@ -1,0 +1,348 @@
+.shop-body {
+    border-top: 3px solid white;
+    margin: 0 auto;
+    padding: 90px 50px 100px;
+    background: #ededed;
+}
+
+.all-products {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.all-products h2 {
+    margin: 100px auto 50px;
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+    color: #91D4FF;
+}
+
+.all-products-body {
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+.product-box{
+	padding: 10px;
+    box-sizing: border-box;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+.product {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+.product .image{
+	box-sizing: border-box;
+	flex: 0 1 70%;
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 70%;
+	padding: 10px 10px 0px;
+	height: auto;
+	text-align: center;
+
+}
+.product .image img{
+	box-sizing: border-box;
+	width: auto;
+	height: 100%;
+}
+
+.referenses {
+	box-sizing: border-box;
+	padding: 5px 10px;
+	max-width: 100%;
+	flex: 0 1 10%;
+	max-height: 10%;
+    background-color: white;
+    z-index: 2;
+    overflow: hidden;
+}
+.referenses a {
+	display: inline-block;
+    padding: 6px 8px;
+    font-size: 12px;
+    color: black;
+    background-color: #ededed;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+.product .name{
+	max-width: 100%;
+	max-height: 10%;
+	flex: 0 1 10%;
+	padding: 5px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.product .name a {
+	font-size: 16px;
+	color: black;
+}
+.bottom {
+	box-sizing: border-box;
+    padding:0 10px 10px;
+    flex: 0 1 10%;    
+    max-width: 100%;
+    max-height: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom img {
+    box-sizing: border-box;
+    float: right;
+    background-color: #ededed;
+    border-radius: 10px;
+    padding: 5px 5px;
+    height: 100%;
+    width: auto;
+    transition: all 0.3s ease;
+}
+.scale{
+	margin-left: 5px;
+}
+.product .price {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+.product .price, .product .images{
+	flex: 0 0 50%;
+	max-width: 50%;
+    height: 100%;
+}
+.product:hover {
+    box-shadow: 0 16px 16px -16px rgb(0 0 0 / 50%);
+    transition: all 0.3s ease;
+}
+
+.product:hover .image {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+.image{
+	transition: all 0.3s ease;
+}
+
+
+.cart:hover {
+    background-color: #FF6800;
+    transition: all 0.3s ease;
+}
+.scale:hover {
+    background-color: #FF6800;
+    transition: all 0.3s ease;
+}
+
+.offers-body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.slider {
+    border-radius: 50px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 16px 16px -16px rgb(0 0 0 / 50%);
+}
+
+.slider-line {
+    width: 1024px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
+
+.slider-body {
+    position: relative;
+}
+
+.button {
+    border: 1px solid black;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    z-index: 3;
+    position: absolute;
+    background-color: blue;
+    box-sizing: border-box;
+}
+
+.slider-prev {
+    background: url('../../../../sendemail/static/sendemail/images/left.svg') 0 0 no-repeat;
+    background-size: 70% 70%;
+    background-position: center;
+    left: 20px;
+}
+
+.slider-next {
+    background: url('../../../../sendemail/static/sendemail/images/right.svg') 0 0 no-repeat;
+    background-size: 70% 70%;
+    background-position: center;
+    left: 80px;
+}
+mark{
+    background-color: #91D4FF;
+}
+.show-products{
+    display: block;
+    margin: 20px auto;
+    font-size: 18px;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: black;
+    border: #1a1b19 solid 1px;
+    box-shadow: #b0b0b0 0px -2px 9px 0px;
+    transition: all 0.3s ease-in;
+}
+.show-products:hover{
+    background-color: #FF6800;
+    border-color: #FF6800;
+    transition: all 0.3s ease-in;   
+}
+
+@media(min-width: 1240px) {
+    .all-products-body {
+        width: 1140px;
+    }
+    .offers-body{
+        width: 1140px;
+    }
+}
+@media(max-width: 992px){
+    .all-products-body{
+        justify-content: flex-start;
+    }
+	.product-box {
+    flex: 0 0 33.333333%;
+    max-width: 33.33333%;
+	}
+    .button {
+        width: 30px;
+        height: 30px;
+        bottom: 30px;
+    }
+    .slider-next{
+        left: 60px;
+    }
+    .slider{
+        border-radius: 40px;
+    } 
+
+}
+@media(max-width: 768px){
+	.product-box {
+    	flex: 0 0 50%;
+    	max-width: 50%;
+	}
+    .button {
+        width: 20px;
+        height: 20px;
+        bottom: 20px;
+    }
+    .slider-next{
+        left: 50px;
+    }
+
+}
+@media(max-width: 576px){
+	.shop-body{
+		padding: 90px 0px 100px;
+	}
+	.offers-body{
+		padding: 10px;
+	}
+	.all-products h2{
+		margin: 100px auto 20px;
+		font-size: 40px;
+	}
+}
+@media(max-width: 480px){
+    .show-products{
+        font-size: 15px;
+        padding: 10px;
+    }
+	.all-products h2 {
+    	margin: 21px auto 20px;
+    	font-size: 30px;
+	}
+	.product .name a{
+		font-size: 12px;
+	}
+	.referenses a{
+		font-size: 8px;
+		border-radius: 8px;
+	}
+	.product .price{
+		font-size: 12px;
+	}
+	.product-box{
+		padding: 5px;
+	}
+	.product{
+		height: 340px;
+	}
+	.bottom img{
+		padding: 5px;
+		height: 15px;
+	}
+	.shop-body{
+		padding: 30px 0px;
+	}
+    .offers-body{
+        padding: 0px;
+    }
+    .slider{
+        border-radius: 0px;
+    }
+    .button {
+        width: 16px;
+        height: 16px;
+        bottom: 1px;
+    }
+    .slider-next{
+        left: 40px;
+    }
+}
+@media(max-width: 320px){
+	.product-box {
+    	flex: 0 0 100%;
+    	max-width: 100%;
+	}
+	.product .price{
+		flex: 0 0 100%;
+    	max-width: 100%;
+	} 
+	.product .images{
+		display: none;
+	}
+	.product-box {
+    	padding: 10px 30px;
+	}
+}

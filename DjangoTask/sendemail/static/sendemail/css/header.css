@@ -1,0 +1,358 @@
+a {
+	text-decoration: none; 
+}
+body{
+	font-family: Verdana, sans-serif;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	width:100%; 
+/*	height:100%; 
+	overflow-x:hidden;*/
+}
+html { 
+	height: 100%; 
+	scroll-behavior: smooth;
+	overflow:auto; 
+}
+body { 
+	height: 100%; 
+}
+
+input, textarea {
+	outline: 0;
+}
+
+.header{
+	width: 100%;
+	margin: 0 auto;
+	background: rgb(226,226,226);
+	background: linear-gradient(90deg, rgba(226,226,226,1) 0%, rgba(245,245,245,1) 86%);
+}
+.header-menu{
+	box-sizing: border-box;
+	padding: 20px 30px 20px 30px;
+	width: 100%;
+}
+.header-menu-row{
+	margin: 0px auto;
+	padding: 0px 15px; 
+}
+.header-menu-row .row{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px 15px;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 70px;
+}
+.header-menu-row .logo{
+}
+.logo img{
+	width: 100%;
+	height: 70px;
+}
+.menu-list{
+	list-style-type: none;
+}
+
+.header-content{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 90px 50px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+.header-text{
+	box-sizing: border-box;
+	padding: 15px 30px ;
+	flex: 0 1 100%;
+	max-width: 100%;
+}
+.header-background{
+	box-sizing: border-box;
+    padding: 15px 30px;
+	flex: 0 1 100%;
+    max-width: 100%;
+}
+.header-background img{
+	box-sizing: border-box;
+	max-width: 100%;
+	height: auto;
+}
+
+.header-description p, .header-caption h1, span{
+	margin: 0;
+	text-align: left;
+}
+
+.header-caption h1 {
+	/*font-size: 71px;*/	
+	font-size: calc(39px + 32 * (100vw / 1140));
+	color: #91D4FF;
+	padding-bottom: 15px;
+}
+
+.header-caption span {
+	display: block;
+	font-size: calc(30px + 9 * (100vw / 1140));
+	padding-bottom: 15px;
+}
+.header-description p{
+	font-size: calc(16px + 4 * (100vw / 1140));
+}
+.curds-text, .curds-button, .header-form .form-link {
+	font-weight: 500;
+}
+.curds-text{
+	box-sizing: border-box;
+	width: 60%;
+	padding: 15px 30px;
+	font-size: 19px;
+	border: none;
+	box-shadow: #b0b0b0 0px -2px 9px 0px;
+}
+.curds-button{
+	box-sizing: border-box;
+	padding: 15px 0px;
+	background-color: black;
+	border: #1a1b19 solid 1px;
+	box-shadow: #b0b0b0 0px -2px 9px 0px;
+	margin-left: -6px;
+	width: 40%;
+	transition: all 0.3s ease-in;
+}
+.curds-button:hover{
+	background-color: #FF6800;
+	border-color: #FF6800;
+    transition: all 0.3s ease-in;	
+}
+.curds-button a{
+	font-size: 18px;
+	color: #fff;
+}
+.header-form .form-link:hover{
+	background-color: #FF6800;
+    transition: all 0.3s ease-in;
+}
+.header-form .form-link {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    padding: 14px 0px;
+    font-size: 16px;
+    color: #F0F0F0;
+    background-color: black;
+    box-shadow: #fff 0px -2px 9px 0px;
+    margin-right: 5px;
+    transition: all 0.3s ease-in;
+}
+.form-for-curds{
+	padding-top: 15px;
+	padding-bottom: 30px;
+}
+@media (max-width: 575px) {
+	.header-caption h1{
+		font-size: calc(24px + (32 + 32 * 0.7) * ((100vw - 320px) / 1140));
+	}
+	.header-caption span {
+	display: block;
+	font-size: calc(30px + (9 + 9 * 0.7) * ((100vw - 320px) / 1140));
+	padding-bottom: 15px;
+	}
+	..header-description p{
+	font-size: calc(16px + (4 + 4 * 0.7) * ((100vw - 320px)/ 1140));
+	}
+}
+@media (min-width: 996px){
+	.header-text{
+		flex: 0 1 50%;
+	    max-width: 50%;
+	}
+	.header-background{
+	flex: 0 1 50%;
+    max-width: 50%;
+	}
+
+}
+@media (min-width: 820px){
+	.menu-list{
+		display: flex;
+		align-items: center;
+	}
+	.menu-list > li{
+		padding: 10px 0px;
+	}
+	.menu-link{
+		padding: 11px 15px;
+	    text-align: center;
+	    line-height: 20px;
+	    font-size: calc(13px + 3 * (100vw / 1140));
+	    display: block;
+	    font-weight: 500;
+	    color: #000;
+	}
+	.menu-link:hover{
+	color: #91D4FF;
+	transition: all 500ms ease;
+	}
+	.menu-icon, .icon-back{
+		display: none;
+	}
+}
+@media (max-width: 819px){
+	.menu-body{
+		display: none;
+	}
+	.icon-back{
+		position: relative;
+		box-sizing: border-box;
+		width: 60%;
+		height: 50px;
+		background-color:#91D4FF ;
+	}
+	.menu-icon{
+		width: 40px;
+		position: absolute;
+		right: 10px;
+		top: 7px;
+		cursor: pointer;
+	}
+	.menu-icon span{
+		background: #ffffff;
+	    border-radius: 20px;
+	    display: block;
+	    height: 5px;
+	    margin-top: 5px;
+	    width: auto;
+	}
+
+	.menu-body-small{
+		opacity: 0.9;
+		z-index: 5;
+		height: 0;
+		background-color: white;
+		position: absolute;
+		top: 50px;
+		right: 0px;
+		width: 100%;
+		overflow: auto;
+		transition: height 1s ease 0s;
+	}
+	.menu-body-small.active {
+		box-sizing: border-box;
+		height: 172px;
+		transition: height 1s ease 0s;
+	}
+	.menu-body-small .menu-list{
+		margin: 0;
+	   	padding-inline-start: 0px;
+	}
+	.menu-body-small .menu-link{
+		padding: 11px 15px;
+	    text-align: left;
+	    line-height: 20px;
+	    font-size: 16px;
+	    display: block;
+	    font-weight: 500;
+	    color: #000;
+	   	border-bottom: 1px solid #ccc;
+
+	}
+	.menu-body-small .menu-link:hover{
+	color: #91D4FF;
+	transition: all 500ms ease;
+	}
+}
+@media (min-width: 646px) and (max-width: 996px){
+	.header-form .form-link {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    width: 36%;
+    padding: 14px 12px;
+    font-size: 16px;
+    color: #F0F0F0;
+    background-color: black;
+    border: #1a1b19 solid 1px;
+    box-shadow: #fff 0px -2px 9px 0px;
+    margin-right: 15px;
+	}
+}
+@media (max-width: 645px){
+	.header .logo{
+		width: 100%;
+	}
+	.header .icon-back{
+		width: 100%;
+	}
+	.header-form .form-link{
+    	width: 45%;
+    	padding: 15px 5px;
+    	font-size: 14px;
+    	margin-bottom: 10px;
+	}
+}
+@media (max-width: 480px){
+	.header-description p{
+		font-size: 15px;
+	}
+	.curds-text{
+		font-size: 15px;
+		padding: 10px 20px;
+	}
+	.curds-button{
+		padding: 10px 0px;
+	}
+	.curds-button a{
+		font-size: 15px;
+	}
+	.header-form .form-link{
+		width: 45%;
+		padding: 10px 0px;
+		font-size: 11px;
+	}
+	.header-menu{
+		padding: 20px 0px;
+	}
+	.header-content{
+		padding: 20px 0px;
+	}
+	.header .icon-back{
+		height: 40px;
+	}
+	.menu-icon{
+		width: 35px;
+		top: 3px;
+	}
+	.menu-body-small
+	{
+		top: 40px;
+	}
+	.header-menu{
+		padding: 0px;
+	}
+	.header-content{
+		padding: 0px;
+	}
+
+
+}
+@media (max-width: 320px){
+	.header-description p{
+		font-size: 13px;
+	}
+	.curds-text{
+		font-size: 13px;
+		padding: 10px 20px;
+	}
+	.curds-button a{
+		font-size: 13px;
+	}
+	.header-form .form-link{
+		width: 47%;
+	}
+}

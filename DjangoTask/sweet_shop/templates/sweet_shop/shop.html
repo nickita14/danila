@@ -1,0 +1,35 @@
+{% load static %}
+{% extends 'base.html' %}
+{% block content %}
+    <div class="all-products">
+        <h2>Все наши товары</h2>
+        <div class="all-products-body">
+            <div class="product-box">
+                {% for p in products %}
+                <div class="product">
+                    <div class="image">
+                        <a href="product1.html">
+                            <img src="../images/product1.png">
+                        </a>
+                    </div>
+                    <div class="referenses">
+                        <a href="#">#Сладости</a>
+                        <a href="#">#Сырки</a>
+                        <a href="#">#Десерты</a>
+                    </div>
+                    <div class="name">
+                        <a class="name-link" href='product1.html'>Сырок Mic-vis 20%, 50 г</a>
+                    </div>
+                    <div class="bottom">
+                        <div class="price">6.10 леев</div>
+                        <div class="images">
+                            <img class="scale" src="../images/scales.png">
+                            <img class="cart" src="../images/shopping-cart.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
