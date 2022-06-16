@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/header.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/about.css' %}">
+    <link rel="shortcut icon" href="{% static 'sendemail/images/icon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/info.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/contact.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sendemail/css/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sweet_shop/css/product-page.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'sweet_shop/css/shop.css' %}">
+</head>
+
+<body>
+<div class="header">
+    <div class="header-box">
+        <div class="header-menu">
+            <div class="header-menu-row">
+                <div class="row">
+                    <div class="logo"><img src="{% static 'sendemail/images/background.svg' %}"></div>
+                    <nav class="menu-body">
+                        <ul class="menu-list">
+                            <li>
+                                <a class="menu-link" href="{% url 'home' %}">Главная</a>
+                            </li>
+                            <li>
+                                <a class="menu-link" href="{% url 'shop' %}">Магазин</a>
+                            </li>
+                            <li>
+                                <a class="menu-link" href="/#about_us">О нас</a>
+                            </li>
+                            <li>
+                                <a class="menu-link" href="/#curds">Сырки</a>
+                            </li>
+                            <li>
+                                <a class="menu-link" href="/#contact_us">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="icon-back">
+                        <div class="menu-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <nav class="menu-body-small">
+                            <ul class="menu-list">
+                                <li>
+                                    <a class="menu-link" href="{% url 'home' %}">Главная</a>
+                                </li>
+                                <li>
+                                    <a class="menu-link" href="{% url 'shop' %}">Магазин</a>
+                                </li>
+                                <li>
+                                    <a class="menu-link" href="/#about_us">О нас</a>
+                                </li>
+                                <li>
+                                    <a class="menu-link" href="/#curds">Сырки</a>
+                                </li>
+                                <li>
+                                    <a class="menu-link" href="/#contact_us">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block heder-content %}
+        {% endblock %}
+    </div>
+</div>
+{% block content %}
+{% endblock %}
+<div class="footer">
+    <div class="footer-box">
+        <div class="logo"></div>
+        <div class="row">
+            <div class="coll">
+                <h3>Адрес</h3>
+                <ul>
+                    <li>Strada Alexei Mateevici 60,</li>
+                    <li>Chișinău</li>
+                    <li>+373-12345678</li>
+                    <li>usm@gmail.com</li>
+                </ul>
+            </div>
+            <div class="coll">
+                <h3>Соц.сети</h3>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+            <form class="coll">
+                <h3>Новости</h3>
+                <input class="footer-input" type="email" name="email" placeholder="Почта">
+                <button onclick="follow();" type="button">Подписаться</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'sendemail/js/script.js' %}"></script>
+<script type="text/javascript" src="{% static 'sendemail/js/slider.js' %}"></script>

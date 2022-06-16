@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="description-box">
+        <div class="main-image"><img src="{{ product.photo.url }}"></div>
+        <div class="description">
+            <div class="main-title">{{ product.name }}</div>
+            <div class="price">{{ product.price }} леев</div>
+            <div class="navigation">
+                <ul class="navigation-body">
+                    <li class="navigation_link"><a href="#composition">Состав</a></li>
+                    <li class="navigation_link"><a href="#packaging">Упаковка</a></li>
+                    <li class="navigation_link"><a href="#energy_value">Энергетическая ценность</a></li>
+                    <li class="navigation_link"><a href="#manufacturer">Производитель</a></li>
+                    <li class="navigation_link"><a href="#shelf_life">Срок годности</a></li>
+                    <li class="navigation_link"><a href="#certificates">Сертификаты</a></li>
+                </ul>
+            </div>
+            <div class="description-container" id="composition">
+                <div class="title">Состав</div>
+                <div class="description-text">{{ product.composition|linebreaks }}</div>
+            </div>
+            <div class="description-container" id="packaging">
+                <div class="title">Упаковка</div>
+                <div class="description-text">{{ product.packaging|linebreaks }}</div>
+            </div>
+            <div class="description-container" id="energy_value">
+                <div class="title">Энергетическая ценность на 100г</div>
+                <div class="description-text">{{ product.energy_value|linebreaks }}</div>
+            </div>
+            <div class="description-container" id="manufacturer">
+                <div class="title">Производитель</div>
+                <div class="description-text">{{ product.manufacturer|linebreaks }}</div>
+            </div>
+            <div class="description-container" id="shelf_life">
+                <div class="title">Срок годности</div>
+                <div class="description-text">{{ product.shelf_life|linebreaks }}</div>
+            </div>
+            <div class="description-container" id="certificates">
+                <div class="title">Сертификаты</div>
+                <div class="description-text">{{ product.certificates|linebreaks }}</div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

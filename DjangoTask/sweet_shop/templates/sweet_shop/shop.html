@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="shop-body">
+        <div class="all-products">
+            <h2>{{ header }}</h2>
+            <div class="all-products-body">
+                {% for p in products %}
+                    {% if p.photo %}
+                        <div class="product-box">
+                            <div class="product">
+                                <div class="image">
+                                    <a href="{{ p.get_absolute_url }}">
+                                        <img src="{{ p.photo.url }}">
+                                    </a>
+                                </div>
+                                <div class="referenses">
+                                    {% for category in p.categories.all %}
+                                        <a href="{{ category.get_absolute_url }}">#{{ category }}</a>
+                                    {% endfor %}
+                                </div>
+                                <div class="name">
+                                    <a class="name-link" href='{{ p.get_absolute_url }}'>{{ p.name }}</a>
+                                </div>
+                                <div class="bottom">
+                                    <div class="price">{{ p.price }} леев</div>
+                                    <div class="images">
+                                        <img class="scale" src="{% static 'sweet_shop/images/scales.png' %}">
+                                        <img class="cart" src="{% static 'sweet_shop/images/shopping-cart.png' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% if page_obj.has_other_pages %}
+            <nav class="list-pages">
+                <ul>
+                    {% load paginator_tags %}
+                    {% if page_obj.has_previous %}
+                        <li class="page-num">
+                            <a href="?page={{ page_obj.previous_page_number }}">&lt</a>
+                        </li>
+                    {% endif %}
+                    {% get_proper_elided_page_range paginator page_obj.number 1 1 as page_range %} <!-- here -->
+                    {% for p in page_range %}
+                        {% if page_obj.number == p %}
+                            <li class="page-num-selected page-num">
+                                {{ p }}
+                            </li>
+                        {% else %}
+                            {% if p == paginator.ELLIPSIS %}
+                                <li class="page-num">
+                                    {{ paginator.ELLIPSIS }}
+                                </li>
+                            {% else %}
+                                <li class="page-num">
+                                    <a href="?page={{ p }}">{{ p }}</a>
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if page_obj.has_next %}
+                        <li class="page-num">
+                            <a href="?page={{ page_obj.next_page_number }}">&gt</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+    </div>
+
+{% endblock %}
