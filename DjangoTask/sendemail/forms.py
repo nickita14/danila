@@ -1,6 +1,7 @@
 from captcha.fields import CaptchaField
 from django import forms
 
+
 class ContactForm(forms.Form):
     name = forms.CharField(max_length=255, required=True, widget=forms.TextInput(attrs={'placeholder': 'Ваше имя'}))
     from_email = forms.EmailField(label='Почта', required=True, widget=forms.TextInput(attrs={'placeholder': 'Почта'}))
