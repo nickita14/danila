@@ -1,0 +1,184 @@
+.footer{
+	background-color: #3b3b3b;
+	padding: 60px 50px 30px 50px;
+}
+.footer-box{
+	margin: 0 auto;
+	width: 100%;
+}
+.footer .row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.footer .coll{
+	width: 33.333%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.footer .coll h3{
+	margin: 0;
+	color: #fff;
+    font-size: 40px;
+    line-height: 35px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.footer .coll ul{
+	margin: 0;
+	padding: 0;
+}
+.footer .coll li{
+	display: block;
+    color: #fcfbfb;
+    font-size: 19px;
+	margin: 0px 0px 5px;
+    padding: 0px;
+    list-style: none;
+}
+.footer .coll a{
+	display: block;
+    color: #fcfbfb;
+    font-size: 19px;
+    transition: all 0.3s ease-in;
+}
+.footer .coll a:hover{
+    color: #91D4FF;
+   	transition: all 0.3s ease-in;
+}
+.footer .coll input{
+	padding: 15px 20px;
+    width: 100%;
+    font-size: 19px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.footer .coll button{
+	box-sizing: border-box;
+	padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: #91D4FF;
+    width: 100%;
+    font-size: 20px;
+    transition: all 0.3s ease-in;
+}
+.footer .coll button:hover{
+	background-color: #FF6800;
+    transition: all 0.3s ease-in;
+}
+.footer .logo{
+	box-sizing: border-box;
+	border: 2px solid white;
+	border-radius: 1px;
+	background: url('../images/logo_white.png') 0px 0px no-repeat;
+	background-size: contain;
+	width: 180px;
+	height: 60px;
+	margin-bottom: 50px;
+}
+@media (min-width: 996px) {
+	.footer .coll{
+		width: 30%;
+	}
+	.footer .coll h3{
+		font-size: 50px;
+	}
+}
+@media (min-width: 1240px){
+	.footer-box{
+		width: 1140px;
+	}
+}
+@media(max-width: 925px){
+	.footer .coll button{
+		padding: 15px 5px;
+		font-size: 16px;
+	}
+
+}
+@media(max-width: 600px){
+	.footer .coll h3{
+		font-size: 27px;
+	}
+	.footer .coll li{
+		font-size: 15px;
+	}
+	.footer .coll a{
+		font-size: 15px;
+	}
+	.footer .coll{
+		width: 33.333%;
+		padding: 5px;
+	}
+	.footer .coll input {
+    padding: 10px;
+	}
+}
+@media(max-width: 480px){
+	.footer{
+		padding: 60px 20px 30px 20px;
+	}
+	.footer .logo {
+		width: 100%;
+		height: 70px;
+		background-position: center;
+	}
+	.footer .coll h3{
+		font-size: 18px;
+	}
+	.footer .coll li{
+		font-size: 13px;
+	}
+	.footer .coll a{
+		font-size: 13px;
+	}
+	.footer .coll{
+		width: 33.3333%;
+		padding: 5px;
+	}
+	.footer .coll input{
+		font-size: 13px;
+		padding: 5px 10px;
+	}
+	.footer .coll button{
+		padding: 10px 5px;
+    	font-size: 13px;
+	}
+
+}
+@media(max-width: 320px){
+	.footer{
+		padding: 60px 20px 30px 20px;
+	}
+	.footer .logo {
+		width: 100%;
+		height: 50px;
+		background-position: center;
+	}
+	.footer .coll h3{
+		font-size: 15px;
+	}
+	.footer .coll li{
+		font-size: 9px;
+	}
+	.footer .coll a{
+		font-size: 9px;
+	}
+	.footer .coll{
+		width: 33.3333%;
+		padding: 5px;
+	}
+	.footer .coll input{
+		font-size: 13px;
+		padding: 5px 10px;
+	}
+	.footer .coll button{
+		padding: 10px 5px;
+    	font-size: 10px;
+	}
+
+}
